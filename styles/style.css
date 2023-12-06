@@ -1,0 +1,417 @@
+body {
+    margin: 0;
+    font-family: "Overpass", sans-serif;
+    color: rgb(67, 65, 65);
+    width: 100%;
+  }
+  
+  #first-section {
+    position: relative;
+  }
+  
+  #first-section button {
+    border-radius: 6px;
+    padding: 3px 10px;
+    background-color: rgb(46, 43, 43);
+    color: rgb(255, 253, 245);
+    border: 2px solid rgb(27, 27, 31);
+    cursor: pointer;
+  }
+  #first-section img {
+    width: 100%;
+    height: 43rem;
+    background-position: center;
+    background-size: cover;
+   
+  }
+  
+  #first-section button:hover {
+    background-color: rgb(240, 240, 246);
+    color: rgb(30, 30, 33);
+  }
+  
+  #main-page-text {
+    position: absolute;
+    top: 300px;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+    left: 1.5rem;
+  }
+  #main-page-text ul {
+    margin: 0;
+  }
+  #main-txt h1 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  #main-txt p {
+    margin: 0;
+  }
+  
+  #under-main-txt {
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(78, 76, 76);
+  }
+  
+  #second-section {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(255, 254, 254);
+  }
+  #second-section p {
+    margin-top: 3rem;
+    margin-left: 3rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(193, 161, 119);
+  }
+  
+  #cover {
+    position: relative;
+    width: 70%;
+    height: 50%;
+    margin-left: 10rem;
+  }
+  .cover::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    z-index: 99;
+    height: 100%;
+    width: 150px;
+    background-image: linear-gradient(90deg, rgb(240, 214, 214), transparent);
+  }
+  .cover::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    z-index: 99;
+    height: 100%;
+    width: 150px;
+    background-image: linear-gradient(-90deg, rgb(236, 212, 212), transparent);
+  }
+  #scroll-images {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    overflow: auto;
+    position: relative;
+    scroll-behavior: smooth;
+  }
+  
+  #scroll-images::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  #scroll-images::-webkit-scrollbar-thumb {
+    background-color: rgb(216, 180, 133);
+    border-radius: 6px;
+  }
+  
+  #scroll-images::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(207, 170, 126);
+  }
+  .child {
+    min-width: 350px;
+    height: 300px;
+    margin: 1px 10px;
+    cursor: pointer;
+    border: 1px solid white;
+    overflow: hidden;
+    border: 2px solid rgb(232, 219, 219);
+    box-shadow: 2px 4px 8px rgb(61, 58, 58);
+    margin-bottom: 2rem;
+  }
+  
+  .child img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .icon {
+    color: rgb(245, 232, 232);
+    background-color: rgb(249, 235, 235);
+    font-size: 50px;
+    outline: none;
+    border: none;
+    padding: 0px 20px;
+    cursor: pointer;
+  }
+  
+  #third-section {
+    background-color: rgb(249, 186, 12);
+    padding: 15px;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    width: 98%;
+  
+}
+  #third-section p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  #third-section a {
+    text-decoration: none;
+    color: rgb(53, 50, 50);
+    font-size: 1rem;
+  }
+  #third-section a:hover {
+    border: 3px solid rgb(48, 46, 46);
+    border-radius: 9px;
+    padding: 10px;
+    color: rgb(70, 70, 70);
+  }
+  #fourth-section {
+    display: flex;
+    margin-bottom: 0;
+  }
+  #fourth-section img {
+    border-radius: 5px;
+    box-shadow: 2px 4px 8px rgb(68, 67, 67);
+    margin: 3rem 2.8rem;
+    width: 40%;
+    height: 40rem;
+  }
+  #fourth-section-content {
+    flex-direction: column;
+    margin: 3rem 1.5rem;
+    bottom: 4rem;
+  }
+  #fourth-section-content {
+    margin-left: 5rem;
+  }
+  .title-number {
+    font-weight: bolder;
+    margin-top: 0.2;
+  }
+  .number {
+    font-family: "Croissant One", sans-serif;
+    font-size: 2rem;
+    color: rgb(209, 163, 102);
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  #contact-us-part{
+   margin-left: 1rem;
+  }
+  #fifth-section {
+    position: relative;
+  }
+  #fifth-section img {
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+  }
+  #fifth-section-content {
+    position: absolute;
+    top: 300px;
+    color: azure;
+    font-weight: bolder;
+    background-color: rgba(185, 99, 99, 0.8);
+    box-shadow: 2px 4px 8px rgb(68, 67, 67);
+    padding-left: 10px;
+    padding: 10px 30px;
+    margin: 1rem auto;
+    font-size: 1.5rem;
+  }
+  #in-fifth-section {
+    display: flex;
+    justify-content: space-around;
+  }
+  #in-fifth-section button {
+    border-radius: 15px;
+    background-color: rgb(218, 200, 216);
+    border: 3px solid black;
+    color: rgb(72, 71, 71);
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+  }
+  #in-fifth-section button:hover {
+    background-color: rgb(209, 190, 207);
+  }
+ 
+  select {
+    width: 50%;
+    display: block;
+    box-sizing: border-box;
+    font: inherit;
+    border: 1px solid rgb(184, 184, 184);
+    padding: 0.25rem;
+    color: rgb(61, 58, 58);
+    margin-bottom: 4rem;
+  }
+  
+  @media only screen and (max-width: 1024px){
+       #third-section{
+        width: 97%;
+       }
+  }
+
+  
+  @media only screen and (max-width: 915px) {
+    html {
+      display: flex;
+    }
+    #cover{
+        margin-left: 5rem;
+    }
+   
+    #third-section{
+        width: 96.3%;
+    }
+   
+    #fourth-section {
+      display: block;
+    }
+    #fourth-section img {
+      width: 90%;
+      margin: 0;
+      margin-left: 3rem;
+    }
+    #fourth-section-content {
+      margin-left: 1.3rem;
+    }
+    #fifth-section img{
+        height: 40rem;
+    }
+    #fifth-section-content{
+        top: 15rem;
+    }
+    
+  }
+  
+  @media only screen and (max-width: 767px) {
+    html {
+      display: flex;
+    }
+    #second-section p{
+        margin-left: 1rem;
+    }
+    #first-section img{
+        height: 35rem;
+    }
+    #main-page-text{
+        top: 10rem;
+        font-size: 1rem;
+    }
+    #main-page-text ul{
+        padding-left: 0;
+    }
+    
+    #cover {
+      margin-left: 1rem;
+      width: 80%;
+    }
+    #third-section{
+        width: 90%;
+    }
+    
+    #fourth-section {
+      display: block;
+    }
+    #fourth-section img {
+      width: 70%;
+      height: 30rem;
+    object-fit: cover;
+    }
+    #fourth-section-content {
+      margin-left: 1.3rem;
+    }
+  
+    #fifth-section img {
+      width: 100%;
+      height: 80vh;
+      object-fit: cover;
+    }
+    #fifth-section-content {
+      top: 15rem;
+      margin: 0.1rem 0.5rem;
+      font-size: 1rem;
+    
+    }
+  
+    #in-fifth-section input {
+      margin-top: 0;
+      margin-left: 0;
+      padding: 0.1rem 0.1rem;
+      border-radius: 8px;
+    }
+    #in-fifth-section button {
+      padding: 0.1rem 0.1rem;
+      margin-left: 1rem;
+      margin-top: 0.3rem;
+      font-size: 0.3rem;
+    }
+    #in-fifth-section li input {
+      font-size: 0.1rem;
+      
+    }
+  
+    #date-part input {
+      padding: 0.1rem 0.8rem;
+    }
+    #contact-us-part{
+        margin-left: 1rem;
+    }
+    #contact-us-part select {
+      width: 50%;
+    }
+  
+    #social-part {
+      padding-top: 3rem;
+      padding-left: 0;
+    }
+    #social-part a {
+      margin-left: 2rem;
+    }
+  }
+  @media only screen and (max-width: 281px){
+    strong{
+        font-size: 1.5rem ;
+    }
+    #under-title{
+        font-size: 0.8rem;
+    }
+    #main-page-text{
+        font-size: 0.8rem;
+        left: 0.5rem;
+    }
+    #under-main-txt{
+        font-size: 0.4rem;
+    }
+    #main-page-text button{
+        font-size: 0.3rem;
+       
+    }
+    #first-section img{
+        height: 25rem;
+    }
+
+    #second-section p{
+        font-size: 1.5rem;
+    }
+    #cover{
+        margin-left: 1.5rem;
+        width: 70%;
+    }
+    #fifth-section-content{
+        width: 70%;
+    }
+    #fifth-section-content ul{
+        margin: 0;
+        padding: 0;    
+   }
+   #fourth-section img{
+    height: 25rem;
+   }
+  }

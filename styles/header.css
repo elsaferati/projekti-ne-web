@@ -1,0 +1,198 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(252, 249, 249);
+    height: 90px;
+    padding: 0 10px;
+    @media screen and (min-width: 1080px) {
+      padding: 0;
+      
+    }
+   
+  }
+  
+  header .logo {
+    display: none;
+    height: 90px;
+    object-fit: contain;
+    @media screen and (min-width: 1080px) {
+      display: block;
+    }
+  }
+  
+  header .logo-container {
+    display: flex;
+  }
+  
+  header .logo-text-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  header .logo-image-container {
+    height: 100%;
+  }
+  
+  header .burget-icon {
+    height: 40px;
+    object-fit: contain;
+  }
+  
+  header .navigation {
+    display: none;
+    position: absolute;
+    background-color: rgb(67, 65, 65);
+    flex-direction: column;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    gap: 10px;
+    z-index: 1;
+    
+    @media screen and (min-width: 1080px) {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      background-color: transparent;
+      padding: 0 10px;
+    }
+  }
+  
+  header .burger-menu {
+    display: block;
+    @media screen and (min-width: 1080px) {
+      display: none;
+    }
+  }
+  header .burger-menu button {
+    background: transparent;
+    border: none;
+  }
+  
+  header .nav-item {
+    display: flex;
+    position: relative;
+    overflow: visible;
+    padding: 20px 50px;
+    justify-content: center;
+    @media screen and (min-width: 1080px) {
+      padding: 0;
+    }
+  }
+  
+  header .item-close-button {
+    display: flex;
+    @media screen and (min-width: 1080px) {
+      display: none;
+    }
+  }
+  
+  header .nav-item .nav-item-href {
+    text-decoration: none;
+    padding: 6px 12px;
+    color: rgb(252, 249, 249);
+    border: 1px solid rgb(66, 63, 63);
+    @media screen and (min-width: 1080px) {
+      color: rgb(66, 63, 63);
+      border: 1px solid rgb(252, 249, 249);
+    }
+  }
+  
+  header .nav-item .close-button {
+    background: transparent;
+    border: none;
+  }
+  
+  header .nav-item .close-icon {
+    height: 40px;
+    object-fit: contain;
+  }
+  
+  header .nav-item a:hover {
+    border-radius: 12px;
+    border: 1px solid rgb(66, 63, 63);
+  }
+  
+  header .nav-item .primary-button {
+    border: 1px solid rgb(66, 63, 63);
+    border-radius: 12px;
+    padding: 6px 12px;
+    background-color: rgb(66, 63, 63);
+    color: rgb(255, 253, 245);
+    cursor: pointer;
+  }
+  header .nav-item .primary-button:hover {
+    background-color: rgb(255, 253, 245);
+    color: rgb(66, 63, 63);
+  }
+  
+  header .nav-item:hover {
+    color: white;
+  }
+  
+  header .dropdown {
+    display: none;
+    position: absolute;
+    top: 35px;
+    background-color: rgb(66, 63, 63);
+    z-index: 1;
+    border-radius: 15px;
+  }
+  header .navigation :last-child:hover .dropdown {
+    display: block;
+  }
+  header .navigation :last-child:hover .dropdown ul {
+    display: block;
+  }
+
+  header .dropdown:hover {
+    font-size: larger;
+  }
+  
+  header .dropdown a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  header .dropdown li {
+    width: 48px;
+    font-size: smaller;
+    padding: 10px;
+    padding-left: 0;
+    padding-right: 2rem;
+  }
+  
+  header .dropdown a:hover {
+    font-size: larger;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+  }
+  
+  .logo {
+    margin-right: 0;
+    mix-blend-mode: color-burn;
+  }
+  #title {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  #title a {
+    font-size: 2.18rem;
+    font-family: "Croissant One";
+    text-align: left;
+    padding-left: 0rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(67, 65, 65);
+  }
+  #title a:hover {
+    color: rgb(96, 88, 88);
+  }
+  #under-title {
+    margin-top: 0;
+    padding-top: 0;
+  }
