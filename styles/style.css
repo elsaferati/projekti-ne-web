@@ -147,11 +147,12 @@ body {
   }
   
   #third-section {
-    background-color: rgb(249, 186, 12);
+    background-color: rgb(113, 111, 116);
     padding: 15px;
     margin-bottom: 3rem;
     margin-top: 3rem;
     width: 98%;
+    color: white;
   
 }
   #third-section p {
