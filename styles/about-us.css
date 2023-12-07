@@ -1,0 +1,227 @@
+body{
+    margin: 0;
+    font-family: "Overpass", sans-serif ;
+}
+main{
+    background-color:rgb(25, 32, 49);
+    background: linear-gradient(180deg, rgb(25, 32, 49),  rgb(25, 32, 49));
+}
+#img-part{
+    position: relative;
+}
+#img-part img{
+    width: 80%;
+    height: 25rem;
+    box-shadow: 2px 4px 6px rgb(32, 16, 16) ;
+    margin-bottom: 40rem;
+    object-fit: cover;
+    margin-top: 1rem;
+   margin-left: 10rem;
+}
+.container{
+    border: 2px solid rgb(25, 32, 49);
+    background-color: rgb(51, 50, 81);
+    border-radius: 7px;
+    box-shadow: 2px 5px 5px rgb(14, 15, 15);
+    margin: auto 1rem;
+    height: 13rem;
+    width: 33%;
+    color: rgb(199, 193, 193);
+
+}
+#about-us-content{
+    position: absolute;
+    top: 27rem;
+}
+#about-us-content ul{
+    display: flex;
+    justify-content: start;
+    padding: 0;
+    margin: 0;
+
+
+}
+
+#about-us-content ul li:hover{
+    cursor: pointer;
+}
+
+#about-us-content ul li div{
+    padding: 5px 13px;
+    width: fit-content;
+    text-align: center;
+}
+#about-us-content ul li div h2{
+    margin-top: 0.3rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+#about-us-content ul li div button{
+    padding: 3px 20px; 
+    border-radius: 3px;
+    background-color: rgb(137, 144, 143);
+    color: white;
+    border: 1px solid rgb(0, 0, 0);
+    cursor: pointer;
+
+}
+
+#client-part p{
+    margin-top: 0.3rem;
+}
+
+#last-section{
+    position: absolute;
+    top: 35rem;
+   
+}
+#last-section div{
+    
+    display: flex;
+    background-color: rgb(137, 144, 143);
+    color: rgb(14, 5, 31);
+    padding-left: 0;
+    margin: 0;
+   margin-top: 15rem;
+
+}
+#last-section div p{
+    padding: 3rem 4rem;
+}
+#last-section img{
+    object-fit: cover;
+}
+
+@media only screen  and (max-width: 1024px){
+    #img-part img{
+        margin-left: 4rem;
+    }
+    main{
+        height: 95rem;
+    }
+    #about-us-content ul{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+    #about-us-content ul li{
+        width: 60%;
+        margin-left: 8rem;
+        margin-bottom: 1rem;
+    }
+    #about-us-content {
+        top: 27rem;
+       
+    }
+    #last-section {
+        position: inherit;
+       margin: 0;
+       padding: 0;
+      }
+   #last-section div p{
+        padding: 0 2rem;
+    }
+    #last-section div{
+        margin-top: 7rem;
+    }
+
+}
+
+
+@media only screen  and (max-width: 767px) {
+    html{
+        display: flex;
+        viewport-fit: cover;
+    }
+    main{
+        height: 123rem;
+        bottom: 0;
+    }
+    #about-us-content {
+        top: 27rem;
+        margin-left: 2rem;
+    }
+    #last-section {
+        position: absolute;
+      top: 90rem;
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+    #last-section div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 0;
+    }
+    #last-section div p{
+        padding: 1rem 2rem;
+    }
+   
+    #last-section img{
+        width: 100%;
+        height: 15rem;
+        object-fit: cover;
+    }
+    #last-section ul{
+        display: block;
+        width: 65%;
+    }
+   
+    #about-us-content ul{
+        display: flex;
+        flex-direction: column;
+ 
+    }
+    #about-us-content ul li{
+        width: 75%;
+        margin: 0;
+        margin-bottom: 2rem ;
+        margin-left: 2rem;
+    }
+    .container{
+        margin: auto 2.5rem;
+        height: 18rem;
+        width: 70%;
+    }
+   
+    #img-part img{
+        width: 80%;
+        height: 25rem;
+        margin-bottom: 0;
+        margin-left: 3rem;
+    }
+    
+}
+@media only screen  and (max-width: 281px){
+    main{
+        height: 120rem;
+    }
+    #title{
+        margin: 0;
+    }
+    strong{
+        font-size: 1.5rem;
+    }
+    #under-title{
+        font-size: 0.8rem;
+    }
+    #img-part img{
+        margin-left: 2rem;
+        object-fit: cover;
+    }
+    #about-us-content ul li{
+        width: 93%;
+        margin: 0;
+        margin-bottom: 2rem ;
+        
+    }
+    .container{
+        margin: auto 2.5rem;
+        height: 18rem;
+        width: 70%;
+    }
+    #last-section div p{
+        padding: 0 0.5rem;
+    }
+}
+
