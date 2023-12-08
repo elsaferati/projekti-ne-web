@@ -1,4 +1,5 @@
 header {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -13,6 +14,7 @@ header {
   }
   
   header .logo {
+    margin-top: 5px;
     display: none;
     height: 90px;
     object-fit: contain;
@@ -182,7 +184,6 @@ header {
   }
   #title a {
     font-size: 2.18rem;
-    font-family: "Croissant One";
     text-align: left;
     padding-left: 0rem;
     cursor: pointer;
