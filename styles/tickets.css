@@ -70,11 +70,18 @@ body {
     font-size: large;
     border-radius: 30px;
 }
-
-.check:hover {
-    color: blue;
+.check input[type=button] {
+    background-color: rgb(223, 223, 230);
+    margin-right: 5px;
+    height: 24px;
+    border-radius: 4px;
+    border-color: rgb(151, 150, 150);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-bottom: 10px;
 }
-
+.check input[type=button]:hover{
+    border-color: rgb(15, 219, 205);
+}
 .from:hover {
     color: blue;
 }

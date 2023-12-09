@@ -1,0 +1,21 @@
+.cl{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3px;
+}
+.date1{
+    margin-left: 9px;
+}
+.passengers{
+    margin-top: 20px;
+}
+.class{
+    margin-top: 20px;
+}
+.checkbox{
+    width: 120vh;
+    height: 26vh;
+}
+input[type=submit]{
+    margin-top: 15px;
+}
