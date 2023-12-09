@@ -1,0 +1,517 @@
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+}
+main{
+    margin-bottom: 2rem;
+}
+
+#first-section ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 0;
+    padding-left: 0;
+}
+#first-section ul li img{
+    width: 44rem;
+    height: 25rem;
+    box-shadow: 2px 4px 6px rgb(72, 69, 69);
+    object-fit: cover;
+}
+#first-img{
+    margin-left: 0;
+}
+
+#second-section{
+    text-align: center;
+    margin-top: 6rem;
+}
+
+#second-section ul{
+    display: flex;
+    margin-left: 20rem;
+}
+#second-section img{
+    height: 3rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    object-fit: cover;
+}
+#title{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 0.7rem;
+    color: rgb(64, 60, 60);
+}
+#input li{
+    padding: 0  8px;
+}
+
+#input li input{
+    margin-top: 1.5rem;
+    padding: 0.5rem 3.5rem;
+    border-radius: 10px;
+    border: 2px solid rgb(22, 17, 53);
+    cursor: pointer;
+    box-shadow: 2px 4px 6px rgb(72, 69, 69);
+}
+#input li input:hover{
+    background-color: rgba(46, 39, 78, 0.181);
+}
+#input li #date{
+    padding: 0.5rem 6.6rem;
+}
+#input li button{
+    padding: 0.4rem 1.4rem;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgba(22, 17, 53, 0.236);
+    box-shadow: 2px 4px 6px rgb(72, 69, 69);
+
+}
+#input li button:hover{
+    background-color: rgba(22, 17, 53, 0.493);
+}
+
+#third-section ul{
+    display: flex;
+    justify-content: space-around;
+    margin: 8rem auto;
+}
+#third-section ul li img{
+    width: 25rem;
+    height: 20rem;
+    cursor: pointer;
+    box-shadow: 1px 3px 5px rgb(64, 60, 60);
+    object-fit: cover;
+}
+
+#third-section div{
+    margin: auto 1.5rem;
+    width: 80%;
+}
+#third-section div p{
+    margin-top: 0.3rem;
+    margin-bottom: 0;
+}
+#third-section div h2{
+    margin-bottom: 0;
+}
+.title2{
+    font-weight: bold;
+}
+
+#fourth-section{
+    margin-top: 5rem;
+}
+
+#fourth-section ul{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3rem;
+   margin-bottom: 12rem;
+}
+#fourth-section ul li{
+    background-color: rgb(255, 255, 255);
+    border: 5px solid rgba(46, 44, 44, 0.792);
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    box-shadow: 2px 3px 5px rgb(64, 60, 60);
+}
+#fourth-section ul li:hover{
+    padding: 0.8rem 1.5rem;
+}
+#fourth-section ul li img{
+   height: 5rem;
+   object-fit: cover;
+}
+#fourth-section h1{
+    margin-left: 1rem;
+}
+#fifth-section{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+#fifth-section img{
+    height: 35rem;
+   width: 30%;
+   margin-left: 6rem;
+   box-shadow: 3px 6px 8px rgb(72, 69, 69);
+   object-fit: cover;
+}
+
+#whole-part{
+    margin-right: 15rem;
+}
+.in{
+    border: 3px solid rgb(64, 60, 60);
+    display: flex;
+    width: 30rem;
+    margin-left: 0;
+    margin-bottom: 1rem;
+    box-shadow: 2px 1px 4px rgb(72, 69, 69);
+    justify-content: space-between;
+    
+}
+.in li {
+    margin: auto 0;
+    
+}
+
+.title1{
+    font-size: large;
+    font-weight: bold;
+}
+.right{
+    padding-left: 0;
+}
+
+.left{
+    padding-right: 0.5rem;
+}
+
+.right p{
+    margin-bottom: 0;
+}
+.title1 p{
+   margin-top: 0.3rem;
+   margin-bottom: 2rem;
+}
+.top p{
+    margin-top: 1.5rem;
+}
+
+.sixth-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    
+    
+}
+.sixth-section h1{
+    margin-left: 3rem;
+    font-weight: bold;
+}
+.container2{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    width: 500px;
+    height: 500px;
+    transition: 0.25s;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+
+}
+.container2 img{
+    width: 15rem;
+    height: 20rem;
+    object-fit: cover;
+    border:  5px solid rgb(22, 17, 53);
+    box-shadow: 3px 6px 8px rgb(72, 69, 69);
+}
+
+.container2 .box{
+    position: relative;
+    background: var(img);
+    background-position: center;
+    background-size: cover;
+    transition: 0.25s;
+    display: flex;
+    justify-content: center;
+    filter: grayscale(0) brightness(1);
+    margin-left: 20px;
+}
+
+.container2:hover .box{
+    filter: grayscale(1);
+}
+
+.container2 .box:hover{
+    filter: grayscale(0) brightness(1.25);
+}
+
+.container2:has(.one:hover){
+    grid-template-columns: 2fr 0.5fr 0.5fr 0.5fr 0.5fr;
+}
+
+.container2:has(.two:hover){
+    grid-template-columns: 0.5fr 2fr 0.5fr 0.5fr 0.5fr;
+}
+.container2:has(.three:hover){
+    grid-template-columns: 0.5fr 0.5fr 2fr 0.5fr 0.5fr;
+}
+.container2:has(.four:hover){
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 2fr 0.5fr;
+}
+.container2:has(.five:hover){
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 2fr;
+}
+
+.container2 .box:nth-child(even){
+    transform: translateY(30px);
+}
+
+.container2 .box:nth-child(odd){
+    transform: translateY(-30px);
+}
+.container2 .box::after{
+    content: attr(data-text);
+    position: absolute;
+    bottom: -50px;
+    color: black;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 5px 10px;
+    top: 25rem;
+    white-space:nowrap;
+    transition: 0.5s;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    opacity: 0;
+    transition-delay: 0s;
+}
+
+.container2 .box:hover::after{
+    opacity: 1;
+    bottom: -60px;
+    transition-delay: 0.25s;
+}
+
+@media only screen  and (max-width: 1280px){
+  html{
+    display: flex;
+  }
+}
+
+@media only screen  and (max-width: 915px){
+    html{
+        display: flex;
+    }   
+    #first-section ul{
+        display: block;
+    
+    }
+    #first-section ul li img{
+       margin: 0.5rem 1rem;
+       width: 97%;
+    }
+    #second-section {
+        width: 70%;
+        margin-left: 8rem;
+        text-align: start;
+        margin: 3rem 10rem;
+    }
+    
+    #second-section p{
+        font-size: 2.5rem;
+    }
+   #title{
+    font-size: 3rem;
+   }
+    #second-section ul{
+        display: block;
+        margin-left: 0.5rem;
+
+    }
+    #input li input{
+        margin-top: 0.5rem;
+        padding: 1rem 4.5rem;
+        font-size: 2rem;
+    }
+    #input li #date{
+        padding: 1rem 9rem;
+    }
+
+    #input li button{
+        padding: 1rem 1.8rem;
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+
+    #second-section img{
+       margin-left: 20rem;
+       height: 5rem;
+    }
+    #third-section ul{
+        display: block;
+    margin: 8rem 8rem;
+    }
+
+    #third-section div{
+        font-size: 2rem;
+        width: 120%;
+    }
+    
+    #third-section ul li img{
+        width: 140%;
+        height: 90%;
+        margin-left: 0;
+    }
+    #third-section ul li{
+        margin-bottom: 3rem;
+        width: 33rem ;
+    }
+    #fourth-section ul{
+        display: block;
+        margin-left: 5rem;
+    }
+    #fourth-section h1{
+        font-size: 2rem;
+    }
+    #fourth-section ul li{
+        width: 30%;
+        height: 10rem;
+        margin-bottom: 2rem;
+        align-items: center;
+    }
+    #fourth-section ul li img {
+        margin: auto 4rem;
+        height: 7rem;
+    }
+    #fourth-section ul li p{
+        margin: 0;
+        margin-left: 1rem;
+        font-size: 2rem;
+    }
+    #fifth-section{
+        display: block;
+        margin: auto 8rem;
+    }
+    .in{
+        font-size: 2rem;
+    }
+    #whole-part h2{
+        font-size: 2.5rem;
+    }
+    .title1 p{
+        font-size: 1.5rem;
+    }
+    #fifth-section img{
+        margin-left: 1rem;
+        object-fit: cover;
+        width: 70%;
+        height: 50rem;
+        margin-bottom: 1rem;
+    }
+   
+
+}
+
+@media only screen  and (max-width: 768px) {
+    html{
+        display: flex;
+    }
+    
+    #first-section ul{
+        display: block;
+    
+    }
+    #first-section ul li img{
+       margin: 0.3rem 0.5rem;
+       width: 97%;
+       object-fit: cover;
+    }
+
+    #second-section{
+        width: 70%;
+        margin-left: 8rem;
+    }
+   
+    #second-section p{
+        font-size: 2rem;
+    }
+   
+    #second-section ul{
+        display: block;
+        margin-left: 0.4rem;
+
+    }
+    #input li input{
+        margin-top: 0.5rem;
+        padding: 1rem 4.5rem;
+        font-size: 2rem;
+    }
+    #input li #date{
+        padding: 1rem 9rem;
+    }
+
+    #second-section img{
+       margin-left: 20rem;
+       height: 5rem;
+    }
+    #input li button{
+        padding: 1rem 1.8rem;
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+
+    #third-section div{
+        font-size: 2rem;
+        width: 120%;
+    }
+    #third-section ul li img{
+        width: 130%;
+        height: 90%;
+    }
+    #third-section ul{
+        margin-left: 5rem;
+    }
+    
+    #third-section ul li{
+        margin-bottom: 3rem;
+      
+    }
+  
+    #fourth-section ul{
+        display: block;
+        margin-left: 5rem;
+    }
+
+    #fourth-section h1{
+        font-size: 2.5rem;
+    }
+    #fourth-section ul li{
+        width: 30%;
+        height: 10rem;
+        margin-bottom: 2rem;
+        align-items: center;
+    }
+    #fourth-section ul li img{
+        margin: auto 4rem;
+        height: 7rem;
+    }
+    #fourth-section ul li p{
+        margin: 0;
+        margin-left: 1rem;
+        font-size: 2rem;
+    }
+    
+    #fifth-section{
+        display: block;
+    }
+    .in{
+        font-size: 2rem;
+    }
+    #whole-part h2{
+        font-size: 2.5rem;
+    }
+    .title1 p{
+        font-size: 1.5rem;
+    }
+    #fifth-section img{
+        margin-left: 1rem;
+        object-fit: cover;
+        width: 70%;
+        height: 50rem;
+        margin-bottom: 1rem;
+    }
+
+
+}
