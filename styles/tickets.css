@@ -1,0 +1,145 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.headd {
+    display: flex;
+    background-color:rgb(245, 244, 239);
+    height: 55px;
+}
+.button1 {
+    width: 35px;
+    height: 40px;
+    background-color: rgb(117, 206, 248);
+    margin-top: 7px;
+    margin-left: 5px;
+    border-radius: 7px;
+}
+
+.button1 img {
+    width: 33px;
+    height: 33px;
+    margin-top: 3px;
+}
+.button1:hover{
+    background-color:  rgb(46, 76, 95);
+}
+.button2 {
+    width: 35px;
+    height: 40px;
+    background-color: rgb(117, 206, 248);
+    margin-top: 7px;
+    margin-left: 5px;
+    border-radius: 7px;
+}
+
+.button2 img {
+    width: 30px;
+    height: 30px;
+    margin-left: 3px;
+    margin-top: 5px;
+}
+
+.button2:hover {
+    background-color: rgb(46, 76, 95);
+}
+.foto {
+   
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: 100% 100%;
+    flex-wrap: wrap;
+}
+
+.checkbox {
+    color: rgb(50, 48, 48);
+    width: 120vh;
+    height: 35vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(245, 244, 239);
+    padding: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+    border-radius: 30px;
+}
+
+.check:hover {
+    color: blue;
+}
+
+.from:hover {
+    color: blue;
+}
+
+.to:hover {
+    color: blue;
+}
+
+.date1:hover {
+    color: blue;
+}
+
+.date2:hover {
+    color: blue;
+}
+
+.passengers:hover {
+    color: blue;
+}
+
+.class:hover {
+    color: blue;
+}
+
+.type {
+    display: flex;
+}
+
+.destinations {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 150px;
+    margin-left: 10px;
+}
+
+.datat {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 150px;
+    margin-left: 10px;
+    margin-top: 18px;
+
+}
+
+.end {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 130px;
+    margin-left: 10px;
+    margin-top: 40px;
+}
+
+input[type=submit] {
+    
+    color: rgb(46, 43, 43);
+    background-color: rgb(223, 223, 230);
+    border-radius: 40px;
+    border-color: cadetblue;
+    height: 35px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   
+}
+
+input[type=submit]:hover {
+    color: rgb(18, 20, 49);
+    border-color: rgb(75, 255, 75);
+
+}
