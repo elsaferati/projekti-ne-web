@@ -80,48 +80,86 @@
                
                
             </div>
-            <form id="login" class="input-group" name="form" onsubmit="return validated()">
-                <input type="email" class="input-field" id="userId" name="email" placeholder="User Id">
+            <form id="login" class="input-group" name="form"  onsubmit="return validateLoginForm()">
+                <input type="email"  class="input-field" id="userId" name="email" placeholder="User Email">
                 <div class="error-message" id="emailError"></div>
-                <input type="text" class="input-field" id="password" name="password" placeholder="Enter Password">
+                <input type="password" class="input-field" id="password" name="password" placeholder="Enter Password">
                 <div class="pass-message" id="passError"></div>
                 <input type="checkbox" class="chech-box"> <span>Remember Password</span>
-                <button type="submit" class="submit-btn" onclick=" validateForm()">Log in</button>
+                <button type="submit" class="submit-btn" >Log in</button>
             </form>
-            <form id="register" class="input-group">
-                <input type="text" class="input-field" id="registerUser" placeholder="User Id">
+            <form id="register" class="input-group"  name="form"  >
+                <input type="text" class="input-field" id="registerUser" placeholder="User Name">
                 <div class="user-message" id="userError"></div>
                 <input type="email" class="input-field" id="userId" placeholder="Email Id">
                 <div class="error-message" id="emailError"></div>
-                <input type="text" class="input-field" id="password" name="password" placeholder="Enter Password">
+                <input type="password" class="input-field" id="password" name="password" placeholder="Enter Password">
                 <div class="pass-message" id="passError"></div>
                 <input type="checkbox" class="chech-box"> <span>I agree to the terms
                     & conditions </span>
-                <button type="submit" class="submit-btn" onclick="validateForm()">Register</button>
+                <button type="submit" class="submit-btn" >Register</button>
             </form>
             </div>
         </div> 
         <script>
-        var x=document.getElementById("login");
-        var y=document.getElementById("register");
-        var z=document.getElementById("btn");
+          var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
 
-        function register(){
-            x.style.left="-400px";
-            y.style.left="50px";
-            z.style.left="110px";
+function register() {
+    x.style.left = "-400px";
+    y.style.left = "50px";
+    z.style.left = "110px";
+}
 
-        }
-        function login(){
-            x.style.left="50px";
-            y.style.left="450px";
-            z.style.left="0";
+function login() {
+    x.style.left = "50px";
+    y.style.left = "450px";
+    z.style.left = "0";
+}
+document.addEventListener("load", login);
+document.addEventListener("load", register);
 
-        }
 
-        document.addEventListener(onload, login());
-        document.addEventListener(onload, register());
 
+
+        window.addEventListener('load', function () {
+    login();  
+});
+
+let emailRegex = /^[a-zA-Z.-_]+@+[a-z]+\.+[a-z]{2,3}$/;
+let passRegex = /^[a-z1-9]{8,15}$/;
+
+
+function validateLoginForm() {
+    let emailInput = document.getElementById('userId');
+    let emailError = document.getElementById('emailError');
+    let passInput = document.getElementById('password');
+    let passError = document.getElementById('passError');
+    
+
+    emailError.innerText = '';
+    passError.innerText = '';
+    
+
+    if (!emailRegex.test(emailInput.value)) {
+        emailInput.style.border = "1px solid red";
+        emailError.innerText = 'Invalid email';
+        return false;
+    }
+
+    if (!passRegex.test(passInput.value)) {
+        passInput.style.border = "1px solid red";
+        passError.innerText = 'Invalid password';
+        return false;
+    }
+
+    alert('Login form submitted successfully!');
+    return true;
+}
+
+
+      
         
     </script>
     </main>
