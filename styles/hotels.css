@@ -49,6 +49,7 @@ body {
 }
 
 .foto {
+    background-color: rgb(25, 32, 49);
     width: 100%;
     height: 140vh;
     display: flex;
