@@ -163,7 +163,40 @@ function validateLoginForm() {
     return true;
 }
 
+function validateRegisterForm() {
+    let emailInput = document.getElementById('userId');
+    let emailError = document.getElementById('emailError');
+    let passInput = document.getElementById('password');
+    let passError = document.getElementById('passError');
+    let userInput = document.getElementById('registerUser');
+    let userError = document.getElementById('userError');
 
+    emailError.innerText = '';
+    passError.innerText = '';
+    userError.innerText = '';
+
+    if (!emailRegex.test(emailInput.value)) {
+        emailInput.style.border = "1px solid red";
+        emailError.innerText = 'Invalid email';
+        return false;
+    }
+
+    if (!passRegex.test(passInput.value)) {
+        passInput.style.border = "1px solid red";
+        passError.innerText = 'Invalid password';
+        return false;
+    }
+
+    if (!userRegex.test(userInput.value)) {
+        userInput.style.border = "1px solid red";
+        userError.innerText = 'Invalid user ID';
+        return false;
+    }
+
+    alert('Register form submitted successfully!');
+    return true;
+}
+      
       
         
     </script>
