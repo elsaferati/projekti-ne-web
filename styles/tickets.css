@@ -150,3 +150,149 @@ input[type=submit]:hover {
     border-color: rgb(75, 255, 75);
 
 }
+@media only screen and (max-width:1080px){
+.foto{
+    width: 1060px;
+}
+.checkbox{
+    width: 120vh;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+}
+@media only screen and (max-width:1024px){
+    .foto{
+        height: 570px;
+    }
+    .checkbox{
+        height: 280px;
+        width: 700px;
+        margin-right: 50px;
+    }
+    .from{
+        margin-right: 60px;
+    }
+    .date1{
+        margin-right: 56px;
+    }
+}
+@media only screen and (max-width:912px){
+.checkbox{
+   margin-left: 40px;
+
+}
+.foto{
+   height: 630px;
+}
+}
+
+@media only screen and (max-width: 768px) {
+    .headd {
+        height: auto;
+    }
+
+    .button1{
+        width: 32px;
+    }
+    .button2 {
+        width: 32px;
+        margin-bottom: 10px;
+    }
+
+    .button1 img{
+        margin-top: 6px;
+        width: 32px;
+        height: 27px;
+    }
+    .button2 img {
+        width: 27px;
+        height: 25px;
+        margin-top: 8px;
+    }
+
+    .foto {
+        height: 650px;
+        width: 800px;
+    }
+
+.to label{
+    margin-right: 60px;
+}
+    .checkbox {
+        height: 300px;
+        width: 400px;
+        font-size: medium;
+        margin-left: 300px;
+    } }
+@media only screen and (max-width:960px){
+    .checkbox{
+        margin-right: 80px;
+    }
+    
+}
+@media only screen and (max-width:820px){
+    .checkbox{
+        margin-right: 300px;
+        width: 670px;
+    }
+}
+
+@media only screen and (max-width:280px){
+    .foto{
+        height: 700px;
+        width: 500px;
+    }
+    .checkbox{
+        height: 400px;
+        width: 360px;
+    }
+.destinations,
+.datat{
+    display: block;
+}
+.class{
+    margin-right: 50px;
+}
+.searchbox{
+    margin-top: 10px;
+}
+}
+@media only screen and (max-width:412px){
+.foto{
+    width: 420px;
+}
+.checkbox{
+    width: 310px;
+    height: 390px;
+}
+.destinations,
+.datat{
+    display: block;
+}
+.class{
+    margin-right: 30px;
+}
+.searchbox{
+    margin-top: 10px;
+}
+}
+@media only screen and (max-width:430.40px){
+.foto{
+    width: 480px;
+}
+.checkbox{
+    width: 310px;
+    height: 400px;
+}
+.destinations,
+.datat{
+    display: block;
+}
+.class{
+    margin-right: 30px;
+}
+.searchbox{
+    margin-top: 10px;
+}
+}
