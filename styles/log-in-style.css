@@ -113,3 +113,10 @@ span{
 #register{
     left: 50px;
 }
+
+form .error-msg{
+    margin: 10px 0;
+    display: block;
+    border: crimson;
+    
+}

@@ -72,7 +72,7 @@
             <img src="images/contact-us.jpg" alt="">
              
 
-        <form id="contactForm">
+        <form id="contactForm" action="userinformation.php" method="post">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
     
@@ -82,7 +82,7 @@
             <label for="message">Message:</label>
             <textarea id="message" name="message" rows="4" required></textarea>
     
-            <button type="button" onclick="sendMessage()">Send Message</button>
+            <button type="submit" onclick="sendMessage()">Send Message</button>
         </form>
         </div>
        

@@ -1,3 +1,34 @@
+<?php
+@include 'config.php';
+
+if(isset($_POST['submit'])){
+
+
+    $name = mysqli_real_escape_string($conn, $_POST['name']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $password = md5($conn, $_POST['password']);
+
+    $select = " SELECT * from user_form where email = '$email' &&
+    password = ' $password ' ";
+
+    $result = mysqli_query($conn, $select);
+
+    if(mysqli_num_rows($result) > 0){
+        $error[] = 'user already exist!';
+    }
+    else {
+        $insert = "INSERT INTO user_form(id,name,email,password)
+        VALUES('$name', '$email', '$password')";
+        mysqli_query($conn, $insert);
+        
+    }
+
+};
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -85,24 +116,31 @@
                
                
             </div>
-            <form id="login" class="input-group" name="form"  onsubmit="return validateLoginForm()">
+            <form id="login" class="input-group" name="form"  onsubmit="return validateLoginForm()" method="post">
                 <input type="email"  class="input-field" id="userId" name="email" placeholder="User Email">
                 <div class="error-message" id="emailError"></div>
                 <input type="password" class="input-field" id="password" name="password" placeholder="Enter Password">
                 <div class="pass-message" id="passError"></div>
                 <input type="checkbox" class="chech-box"> <span>Remember Password</span>
-                <button type="submit" class="submit-btn" >Log in</button>
+                <button type="submit" class="submit-btn">Log in</button>
             </form>
-            <form id="register" class="input-group"  name="form"  >
-                <input type="text" class="input-field" id="registerUser" placeholder="User Name">
+            <form id="register" class="input-group"  name="form"  method="post"  onsubmit="return validateRegisterForm()">
+            <?php
+               if(isset($error)){
+                foreach($error as $error){
+                    echo '<span class="error-msg">'.$error.'</span>';
+                }
+               }
+            ?>
+                <input type="text" class="input-field" name="name" id="registerUser" placeholder="User Name" >
                 <div class="user-message" id="userError"></div>
-                <input type="email" class="input-field" id="userId" placeholder="Email Id">
+                <input type="email" class="input-field" name="email" id="userId" placeholder="Email Id">
                 <div class="error-message" id="emailError"></div>
                 <input type="password" class="input-field" id="password" name="password" placeholder="Enter Password">
                 <div class="pass-message" id="passError"></div>
                 <input type="checkbox" class="chech-box"> <span>I agree to the terms
                     & conditions </span>
-                <button type="submit" class="submit-btn" >Register</button>
+                <button type="submit" class="submit-btn" name="submit" >Register</button>
             </form>
             </div>
         </div> 
@@ -131,12 +169,18 @@ document.addEventListener("load", register);
         window.addEventListener('load', function () {
     login();  
 });
+window.addEventListener('load', function () {
+    register();  
+});
+
 
 let emailRegex = /^[a-zA-Z.-_]+@+[a-z]+\.+[a-z]{2,3}$/;
 let passRegex = /^[a-z1-9]{8,15}$/;
+let userRegex = /^[a-zA-Z]$/;
 
 
 function validateLoginForm() {
+
     let emailInput = document.getElementById('userId');
     let emailError = document.getElementById('emailError');
     let passInput = document.getElementById('password');
@@ -145,7 +189,7 @@ function validateLoginForm() {
 
     emailError.innerText = '';
     passError.innerText = '';
-    
+
 
     if (!emailRegex.test(emailInput.value)) {
         emailInput.style.border = "1px solid red";
@@ -164,6 +208,7 @@ function validateLoginForm() {
 }
 
 function validateRegisterForm() {
+
     let emailInput = document.getElementById('userId');
     let emailError = document.getElementById('emailError');
     let passInput = document.getElementById('password');
@@ -196,7 +241,7 @@ function validateRegisterForm() {
     alert('Register form submitted successfully!');
     return true;
 }
-      
+
       
         
     </script>
