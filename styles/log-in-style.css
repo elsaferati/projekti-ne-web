@@ -4,14 +4,15 @@ body{
 }
 
 .hero video{
-    width: 50%;
-
+    width: 60%;
+  height: fit-content;
+  margin-top: 100px;
 }
 
 .hero{
     display: flex;
     justify-content: space-between;
-    height: 100%;
+    height: 650px;
     width: 100%;
     background-color:rgb(25, 32, 49);
     background: linear-gradient(180deg, rgb(25, 32, 49),  rgb(25, 32, 49));
@@ -113,10 +114,117 @@ span{
 #register{
     left: 50px;
 }
-
-form .error-msg{
-    margin: 10px 0;
-    display: block;
-    border: crimson;
-    
+footer{
+    margin-top: 43.5rem;
 }
+@media only screen and (max-width: 1024px) {
+    main{
+        width: 1024px;
+    }
+    .hero video{
+        width: 600px;
+    }
+}
+@media only screen and (max-width: 912px){
+main{
+    width: 912px;
+}
+.hero{
+    flex-direction: column-reverse;
+    height: 1300px;
+    margin-bottom: 20rem;
+}
+.hero video{
+    width: 900px;
+}
+#social-part{
+    margin-top: 85rem;
+}
+.form-box{
+    height: 600px;
+}
+input[type="email"]{
+    font-size: 20px;
+}
+input[type="password" ]{
+    font-size: 20px;
+}
+input[type="text" i]{
+    font-size: 20px;
+}
+span{
+    font-size: 18px;
+}
+.chech-box{
+    margin-bottom: 38px;
+}
+
+}
+@media only screen and (max-width: 820px){
+main{
+    width: 820px;
+}
+.hero video{
+    width: 800px;
+}
+}
+@media only screen and (max-width: 768px){
+main{
+    width: 768px;
+}
+.hero video{
+    width: 750px;
+}
+}
+@media only screen and (max-width: 540px){
+    main{
+        width: 540px;
+    }
+    .hero{
+        height: fit-content;
+    }
+    .hero video{
+        width: 95%;
+    } 
+    #social-part{
+        margin-top: 70rem;
+    }
+}
+@media only screen and (max-width: 412px){
+main{
+    width: 412px;
+}
+.hero video{
+    width: 400px;
+} 
+}
+@media only screen and (max-width: 360px){
+    main{
+        width: 360px;
+    }
+    .hero video{
+        width: 350px;
+    } 
+    .form-box{
+        width: 310px;
+    }
+    .input-group{
+        margin-left: -30px;
+    }
+    }
+    @media only screen and (max-width: 430px){
+main{
+    width: 420px;
+}
+.hero video{
+    width: 310px;
+} 
+    }
+    @media only screen and (max-width: 375px){
+        main{
+            width: 375px;
+        }
+        form{
+            width: 330px;
+        }
+    }
