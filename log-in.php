@@ -64,7 +64,7 @@ if(isset($_POST['submit'])){
                         src="images/close.jpg" alt="close-icon" /></button>
             </div>
             <div class="nav-item">
-                <a class="nav-item-href primary-button" href="log-in.html">
+                <a class="nav-item-href primary-button" href="log-in.php">
                     Join us
                 </a>
             </div>
@@ -74,7 +74,7 @@ if(isset($_POST['submit'])){
                 </a>
             </div>
             <div class="nav-item">
-                <a class="nav-item-href" href="contact-us.html">
+                <a class="nav-item-href" href="contact-us.php">
                     Contact us
                 </a>
             </div>
