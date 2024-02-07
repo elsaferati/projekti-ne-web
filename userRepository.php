@@ -1,40 +1,91 @@
 <?php
+include_once 'config2.php';
+include_once 'DatabaseConnection.php';
 
-class UserRepository {
-    private $conn;
-
-    public function __construct() {
-        $servername = "your_server_name";
-        $username = "your_username";
-        $password = "your_password";
-        $dbname = "your_database_name";
-
-        $this->conn = new mysqli($servername, $username, $password, $dbname);
-
-        if ($this->conn->connect_error) {
-            die("Connection failed: " . $this->conn->connect_error);
-        }
+class UserRepository
+{
+    private $connection;
+    private $table = 'users';
+    function __construct()
+    {
+        $dbConnection = new DatabaseConnection();
+        $this->connection = $dbConnection->startConnection();
     }
 
-    public function getAllUsers() {
-        $users = array();
 
-        $result = $this->conn->query("SELECT * FROM users");
+    function insertUser($user)
+    {
 
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                $users[] = $row;
-            }
-        }
+        $conn = $this->connection;
+
+        $id = $user->getId();
+        $name = $user->getName();
+        $email = $user->getEmail();
+        $password = $user->getPassword();
+
+        $sql = "INSERT INTO $this->table (id,name,email,password) VALUES (?,?,?,?)";
+
+        $statement = $conn->prepare($sql);
+
+        $statement->execute([$id, $name, $email, $password]);
+
+        echo "<script> alert('User has been inserted successfuly!'); </script>";
+
+    }
+
+    function getAllUsers()
+    {
+        $conn = $this->connection;
+
+        $sql = "SELECT * FROM $this->table";
+
+        $statement = $conn->query($sql);
+        $users = $statement->fetchAll();
 
         return $users;
     }
 
-    // Add other methods as needed
+    function getUserById($id)
+    {
+        $conn = $this->connection;
 
-    public function __destruct() {
-        // Close the database connection when the object is destroyed
-        $this->conn->close();
+        $sql = "SELECT * FROM $this->table WHERE id='?'";
+
+        $statement = $conn->query($sql);
+        $user = $statement->execute([$id]);
+
+        return $user;
+    }
+
+    function updateUser($id, $name, $email, $password)
+    {
+        $conn = $this->connection;
+
+        $sql = "UPDATE $this->table SET name=?,  email=?,  password=? WHERE id=?";
+
+        $statement = $conn->prepare($sql);
+
+        $statement->execute([$name, $email, $password, $id]);
+
+        echo "<script>alert('update was successful'); </script>";
+    }
+
+    function deleteUser($id)
+    {
+        $conn = $this->connection;
+
+        $sql = "DELETE FROM $this->table WHERE id=?";
+
+        $statement = $conn->prepare($sql);
+
+        $statement->execute([$id]);
+
+        echo "<script>alert('delete was successful'); </script>";
     }
 }
+
+//  $userRepo = new UserRepository;
+
+//  $userRepo->updateUser('1111','SSS','SSS','SSS','SSS','SSS');
+
 ?>
