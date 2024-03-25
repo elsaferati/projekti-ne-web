@@ -1,30 +1,95 @@
 <?php
-session_start();
+@include 'config2.php';
+ include_once 'userRepository.php';
+include_once 'user.php'; 
 
-require_once('config2.php');
-include_once('userRepository.php');
-include_once('user.php');
+/* if(isset($_POST['registerBtn'])){
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $cpassword = $_POST['cpassword'];
+    if(!empty($_POST['name']) && !empty($_POST['email'])&& !empty($_POST['password']) && !empty($_POST['cpassword'])){
+        if($password== $cpassword){
+        $p=crud::conect()->prepare('INSERT INTO crudtable(name, email, password, cpassword) VALUES(:n,:e,:p,:cp)');
+        $p->bindValue(':n', $name);
+        $p->bindValue(':e', $email);
+        $p->bindValue(':p', $password);
+        $p->bindValue(':cp', $cpassword);
+        $p->execute();
+        }else{
+            echo 'password does not match';
+        }
+    }
+} */
 
-if (isset($_POST['loginbtn'])) {
-    if (empty($_POST['email']) || empty($_POST['password'])) {
-        echo "Please fill the required fields!";
-    } else {
-        include_once('users.php');
+
+
+
+
+
+if(isset($_POST['registerBtn'])){
+    if(empty($_POST['name']) || empty($_POST['email'])  || empty($_POST['password'])){
+        echo "Fill all fields!";
+    }else{
+        $name = $_POST['name'];
         $email = $_POST['email'];
         $password = $_POST['password'];
+        $id = $username.rand(100,999);
 
-        foreach ($users as $user) {
-            if ($user['email'] == $email && $user['password'] == $password) {
-                $_SESSION['email'] = $email;
-                $_SESSION['password'] = $password;
-                $_SESSION['role'] = $user['role'];
-                header("location: dashboard.php");
-                exit();
-            }
-        }
-        echo "Incorrect Username or Password!";
+        $user  = new User($id,$name,$email,$password);
+        $userRepository = new UserRepository();
+
+        $userRepository->insertUser($user);
+
+
     }
 }
+
+if(isset($_POST['submit'])){
+
+
+    $name = mysqli_real_escape_string($conn, $_POST['name']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $password = md5($_POST['password']);
+    $cpassword = md5($_POST['cpassword']);
+
+    $select = " SELECT * from `crudtable` where email = '$email' &&
+    password = '$password' ";
+
+$result = mysqli_query($conn, $select);
+
+if ($result === false) {
+    // Handle the query execution error
+    $error[] = 'Error executing the query: ' . mysqli_error($conn);
+} else {
+    // Check if any rows were returned
+    $num_rows = mysqli_num_rows($result);
+    if($num_rows > 0){
+        $error[] = 'User already exists!';
+    } else {
+        // Check if password matches confirmation
+        if($password != $cpassword){
+            $error[] = 'Password does not match confirmation!';
+        } else {
+            // Insert new user into database
+            $insert = "INSERT INTO `crudtable` (name, email, password)
+                       VALUES ('$name', '$email', '$password')";
+            $insert_result = mysqli_query($conn, $insert);
+            if ($insert_result === false) {
+                // Handle the insertion error
+                $error[] = 'Error inserting user: ' . mysqli_error($conn);
+            } else {
+                // User inserted successfully
+                // You may want to redirect the user to a success page or do something else here
+            }
+        }
+    }
+}
+    
+
+}; 
+
+
 ?>
 
 
@@ -43,7 +108,7 @@ if (isset($_POST['loginbtn'])) {
     <link rel="stylesheet" href="styles/header.css">
     <script src="script/header.js" type="text/javascript"></script>
 
-    <title>Log in</title>
+    <title>Register</title>
 </head>
 <body>
     <header>
@@ -107,7 +172,7 @@ if (isset($_POST['loginbtn'])) {
               </video>
           <div class="form-container">
             <form action="" method="post">
-            <h3>login now</h3>
+            <h3>register now</h3>
             <?php
             if(isset($error)){
                 foreach($error as $error){
@@ -115,11 +180,14 @@ if (isset($_POST['loginbtn'])) {
                 };
             };
             ?>
+            <input type="text" name="name" required placeholder="enter your name">
             <input type="email" name="email" required placeholder="enter your email">
             <input type="password" name="password" required placeholder="enter your password">
-            <input type="submit" name="submit" value="login now" class="form-btn">
-            <p>don't have an account? <a href="register_form.php">register now</a></p>
+            <input type="password" name="cpassword" required placeholder="confirm your password">
+            <input type="submit" name="submit" value="register now" class="form-btn">
+            <p>already have an account? <a href="log-in.php">login now</a></p>
           </form>
+          <?php include_once 'registerController.php';?>
         </div>
         </div>
 

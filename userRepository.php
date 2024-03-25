@@ -2,10 +2,13 @@
 include_once 'config2.php';
 include_once 'DatabaseConnection.php';
 
+
+
 class UserRepository
 {
     private $connection;
-    private $table = 'users';
+    private $table = 'crudtable';
+
     function __construct()
     {
         $dbConnection = new DatabaseConnection();
@@ -48,12 +51,14 @@ class UserRepository
     function getUserById($id)
     {
         $conn = $this->connection;
-
-        $sql = "SELECT * FROM $this->table WHERE id='?'";
-
-        $statement = $conn->query($sql);
-        $user = $statement->execute([$id]);
-
+    
+        $sql = "SELECT * FROM $this->table WHERE id=?";
+        $statement = $conn->prepare($sql);
+        $statement->execute([$id]);
+    
+        // Fetch the user data from the executed statement
+        $user = $statement->fetch(PDO::FETCH_ASSOC);
+    
         return $user;
     }
 
